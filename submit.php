@@ -1,0 +1,13 @@
+<?php
+    session_start();
+        if(sizeof($_GET)){
+        $_SESSION['fname']=$_fname;
+        $_SESSION['lname']=$_lname;
+        $_SESSION['User_id']=$_User_id;
+        $_SESSION['email']=$_email;
+        header('location:open.php');
+    }
+    else{
+        header('location:form.php');
+    }
+?>
